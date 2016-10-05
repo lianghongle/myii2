@@ -1,0 +1,39 @@
+// 终端与移动接入平台的聊天通讯协议描述
+module Bu
+{
+	enum MsgType
+	{
+		TEXT    = 1 , 
+		VOICE   = 2 , 
+		PIC     = 3 , 		
+	};
+	
+	enum MsgSubType
+	{
+		FROM_FRIREND = 1,						//好友聊天
+		FORM_GROUP	 = 2,						//群聊天
+		FEED_JOIN_GROUP  = 3,					//新人加入群feeds
+		FEED_ADD_FRIEND = 4,					//申请加好友feeds
+		FEED_AGREE_FRIEND = 5,					//好友确认加好友feeds		
+        FEED_REJECT_FRIEND = 6,                 //拒绝好友申请feeds
+        FEED_APPLY_GROUP = 7,                   //申请入群feeds
+        FEED_REJECT_JOIN_GROUP = 8,             //入群的申请被拒绝
+        FEED_AGREE_JOIN_GROUP = 9,              //入群的申请被通过
+        FEED_INVITE_GROUP = 10,                 //邀请入群feeds
+        FEED_SYSTEM = 11,                        //系统消息
+        FEED_OTHERS = 12,                       //其他
+	};
+	
+    //app发送消息或接收到的消息
+    struct MsgInfo {
+		0 require MsgType 			type;					//
+		1 require MsgSubType		sub_type;				//
+		2 require long				receiver;				//接收者，群或用户
+		3 require vector< byte >    content;				//消息内容
+		4 optional string           avatar;                 //发送者头像
+        5 optional vector< byte >   nickname;               //发送者昵称
+        6 optional short            gender;                 //发送者性别
+        7 optional vector< byte >	busi_ext;               //其他信息
+        8 optional long             time;                   //发送时间
+	};
+};
