@@ -15,13 +15,19 @@ class ComposerStaticInit5e2c8607626da67043588317bd87a412
         'y' => 
         array (
             'yii\\swiftmailer\\' => 16,
+            'yii\\redis\\' => 10,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
+            'yii\\elasticsearch\\' => 18,
             'yii\\debug\\' => 10,
             'yii\\composer\\' => 13,
             'yii\\codeception\\' => 16,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
+        ),
+        'l' => 
+        array (
+            'linslin\\yii2\\curl\\' => 18,
         ),
         'c' => 
         array (
@@ -38,6 +44,10 @@ class ComposerStaticInit5e2c8607626da67043588317bd87a412
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
         ),
+        'yii\\redis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-redis',
+        ),
         'yii\\gii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-gii',
@@ -45,6 +55,10 @@ class ComposerStaticInit5e2c8607626da67043588317bd87a412
         'yii\\faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-faker',
+        ),
+        'yii\\elasticsearch\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-elasticsearch',
         ),
         'yii\\debug\\' => 
         array (
@@ -65,6 +79,10 @@ class ComposerStaticInit5e2c8607626da67043588317bd87a412
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'linslin\\yii2\\curl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/linslin/yii2-curl',
         ),
         'cebe\\markdown\\' => 
         array (
